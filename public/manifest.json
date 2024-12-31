@@ -1,0 +1,28 @@
+{
+  "short_name": "ESP32 Control",
+  "name": "Control ESP32 over BLE",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "80x80",
+      "src": "maskable_icon.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "48x48",
+      "src": "maskable_icon_x48.png",
+      "type": "image/png"
+    },
+    {
+      "src": "logo64.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#eeeeee",
+  "background_color": "#222222"
+}

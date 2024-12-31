@@ -1,0 +1,80 @@
+article.BleTerminal {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+
+    header img {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    &.collapsed {
+        float: right;
+    }
+
+    &.expanded {
+        width: 100%;
+        height: 40vh;
+    }
+
+    section {
+        display: flex;
+        flex: 1;
+        height: 0;
+
+        pre {
+            white-space: pre-wrap;
+            width: 100%;
+            height: 100%;
+            //height: 30rem;
+            //max-height: 30vh;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    form {
+        white-space: nowrap;
+        font-size: 1rem;
+        display: flex;
+    }
+    label {
+        flex: 1;
+        font-family: monospace;
+
+        &::before {
+            display: inline-block;
+            width: 1rem;
+            text-align: right;
+            content: '>';
+        }
+    }
+    input[type=text] {
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 1;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+    }
+    select {
+        float: left;
+        margin: 0;
+        width: 8rem;
+        max-width: 10%;
+    }
+    input[type=submit] {
+        margin: 0;
+        width: 6rem;
+    }
+
+    footer {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

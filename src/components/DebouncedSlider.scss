@@ -1,0 +1,36 @@
+.DebouncedSlider {
+    display: flex;
+    align-items: center;
+
+    span.title {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        border: 1px solid gray;
+
+        &.primary {
+            background: repeating-linear-gradient(45deg,
+                    white,
+                    white 8px,
+                    purple 8px,
+                    purple 16px);
+        }
+
+        &.red {
+            background: red;
+        }
+
+        &.green {
+            background: green;
+        }
+
+        &.blue {
+            background: blue;
+        }
+
+        &.white {
+            background: white;
+        }
+    }
+}

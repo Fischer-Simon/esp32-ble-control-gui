@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+div#root {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.App nav {
+  padding: 0;
+}
+
+.label.nomargin {
+  margin-left: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  cursor: ew-resize;
+}
+
+@media (prefers-color-scheme: dark) {
+  nav, body, .modal .overlay ~ *, .card {
+    background: #222 !important;
+    color: #fff !important;
+  }
+
+  .modal .overlay ~ *, .card {
+    border-color: #555 !important;
+  }
+
+  pre {
+    background: #333 !important;
+  }
+
+  select {
+    background: #222 !important;
+  }
+
+  input, textarea {
+    background-color: #222 !important;
+  }
+
+  article.collapsible.noborder {
+    background: #333 !important;
+  }
+
+  .loader:before,
+  .loader:after {
+    border: 2px solid #aaa;
+  }
+
+  [type=checkbox]:checked + .checkable:after {
+    color: #eee !important;
+  }
+
+  .ReactModal__Overlay {
+    background: rgba(30, 30, 30, 0.75) !important;
+  }
+
+  .ReactModal__Content {
+    background: #222 !important;
+    border-color: #888 !important;
+  }
+}

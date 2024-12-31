@@ -1,0 +1,59 @@
+article.collapsible {
+  header {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+
+    > div {
+      margin-right: 1em;
+    }
+  }
+
+  header::after {
+    float: right;
+    content: '⌃';
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  section, footer {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  &.noborder {
+    border-left: none;
+    border-right: none;
+    background: #eee;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+    > section, > footer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+article.collapsed {
+  header::after {
+    content: '⌄';
+  }
+
+  section,
+  footer {
+    display: none;
+  }
+}
+
+article.inverse-icon.collapsible header::after {
+  content: '⌄';
+}
+
+article.inverse-icon.collapsed header::after {
+  content: '⌃';
+}

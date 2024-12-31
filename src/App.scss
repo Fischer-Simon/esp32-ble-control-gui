@@ -1,0 +1,161 @@
+.App {
+  min-height: 100%;
+
+  &.terminal {
+    padding-bottom: 40vh;
+  }
+
+  main {
+    padding: 4rem 0.4rem 0 0.4rem;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100%;
+  }
+
+  button {
+    white-space: nowrap;
+  }
+
+  .flex {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  span.checkable {
+    white-space: nowrap;
+  }
+}
+
+.loader.space-right {
+  margin-right: 0.5em;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-flex;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  border-radius: 10%;
+  border: 2px solid #222;
+  width: 0.75em;
+  height: 0.75em;
+  aspect-ratio: 1;
+  animation: l4 6s infinite;
+}
+.loader:after {
+  --s: -1;
+  animation-delay: 0.75s
+}
+@keyframes l4 {
+  0%     {transform:scaleX(var(--s,1)) translate(0) rotate(0)}
+  4.16% {transform:scaleX(var(--s,1)) translate(-20%) rotate(0)}
+  8.33% {transform:scaleX(var(--s,1)) translate(-20%) rotate(90deg)}
+  12.5%,
+  25%   {transform:scaleX(var(--s,1)) translate(0) rotate(90deg)}
+
+  25%     {transform:scaleX(var(--s,1)) translate(0) rotate(90deg)}
+  29.16% {transform:scaleX(var(--s,1)) translate(-20%) rotate(90deg)}
+  33.33% {transform:scaleX(var(--s,1)) translate(-20%) rotate(180deg)}
+  38.5%,
+  50%   {transform:scaleX(var(--s,1)) translate(0) rotate(180deg)}
+
+  50%     {transform:scaleX(var(--s,1)) translate(0) rotate(180deg)}
+  54.16% {transform:scaleX(var(--s,1)) translate(-20%) rotate(180deg)}
+  58.33% {transform:scaleX(var(--s,1)) translate(-20%) rotate(270deg)}
+  63.5%,
+  75%   {transform:scaleX(var(--s,1)) translate(0) rotate(270deg)}
+
+  75%     {transform:scaleX(var(--s,1)) translate(0) rotate(270deg)}
+  79.16% {transform:scaleX(var(--s,1)) translate(-20%) rotate(270deg)}
+  83.33% {transform:scaleX(var(--s,1)) translate(-20%) rotate(360deg)}
+  88.5%,
+  100%   {transform:scaleX(var(--s,1)) translate(0) rotate(360deg)}
+}
+
+.loader-error {
+  --box-color: red;
+  --box-background: #ff6a6a;
+}
+
+.loader-success::after {
+  content: '✔';
+  color: green;
+}
+
+.loader-pending {
+  color: grey;
+}
+
+.loader-pending::after {
+  color: grey;
+}
+
+.loader-success::before, .loader-error::before, .loader-pending::before {
+  animation: none;
+  //box-shadow: 0 0.5em var(--box-background), 0.5em 0.5em var(--box-background), 0.5em 1em var(--box-background), 0px 1em var(--box-background);
+}
+
+.loader-success::after, .loader-error::after, .loader-pending::after {
+  animation: none;
+  line-height: 1;
+}
+
+.progress {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2px;
+  background: rgba(100, 100, 100, 0.2);
+  border-radius: 3px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress > div {
+  width: 0;
+  background: #0074d9;
+  height: 16px;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.ReactModal__Content {
+  min-width: 25%;
+}
+
+.ReactModal__Content h2 {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+  margin-bottom: 2rem;
+}
+
+.ReactModal__Content h3 {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+button.modal-close {
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+  float: right;
+  margin: 0;
+}
